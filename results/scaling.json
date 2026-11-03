@@ -1,0 +1,75 @@
+{
+ "model": "xt_t5",
+ "repo": "(new) lucidrains/x-transformers 2.31.7",
+ "target_repo": "LM_Dec_Base_T5RelBias",
+ "category": "Base",
+ "upstream": "lucidrains/x-transformers (MIT), pip 2.31.7",
+ "unified": [
+  "same decoder as xt_alibi; T5 bucketed relative position bias; non-flash attention (bias not supported by flash)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "scaling",
+ "started": "2026-10-29 08:54:43",
+ "smoke": false,
+ "rows": [
+  {
+   "len": 512,
+   "train": {
+    "peak_mb": 287.1,
+    "ms": 28.0,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 184.3,
+    "ms": 11.0,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 1024,
+   "train": {
+    "peak_mb": 831.6,
+    "ms": 63.7,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 601.5,
+    "ms": 17.0,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 2048,
+   "train": {
+    "peak_mb": 2955.2,
+    "ms": 218.4,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 2229.5,
+    "ms": 57.6,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 4096,
+   "train": {
+    "peak_mb": 11174.4,
+    "ms": 2955.1,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 8659.5,
+    "ms": 1030.0,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 8192,
+   "train": "OOM",
+   "infer": "OOM"
+  }
+ ],
+ "seconds": 31.3
+}
